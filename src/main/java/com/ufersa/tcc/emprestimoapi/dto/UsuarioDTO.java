@@ -1,6 +1,6 @@
 package com.ufersa.tcc.emprestimoapi.dto;
 
-import com.ufersa.tcc.emprestimoapi.model.PerfilUsuario;
+import com.ufersa.tcc.emprestimoapi.model.enums.PerfilUsuario;
 import com.ufersa.tcc.emprestimoapi.model.User;
 
 import java.time.LocalDateTime;

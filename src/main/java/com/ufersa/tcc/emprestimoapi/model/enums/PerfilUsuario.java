@@ -1,4 +1,4 @@
-package com.ufersa.tcc.emprestimoapi.model;
+package com.ufersa.tcc.emprestimoapi.model.enums;
 
 public enum PerfilUsuario {
     ROLE_ALUNO,
