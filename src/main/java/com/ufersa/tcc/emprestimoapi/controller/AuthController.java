@@ -2,6 +2,7 @@ package com.ufersa.tcc.emprestimoapi.controller;
 
 import com.ufersa.tcc.emprestimoapi.dto.auth.JwtResponse;
 import com.ufersa.tcc.emprestimoapi.dto.auth.LoginRequest;
+import com.ufersa.tcc.emprestimoapi.dto.auth.RegisterRequest;
 import com.ufersa.tcc.emprestimoapi.security.JwtUtil;
 import com.ufersa.tcc.emprestimoapi.security.UserPrincipal;
 import com.ufersa.tcc.emprestimoapi.service.AuthService;
@@ -30,5 +31,11 @@ public class AuthController {
     @GetMapping("/validate")
     public ResponseEntity<String> validateToken() {
         return ResponseEntity.ok("Token válido");
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<JwtResponse> register(@Valid @RequestBody RegisterRequest registerRequest) {
+        JwtResponse response = authService.register(registerRequest);
+        return ResponseEntity.ok(response);
     }
 }

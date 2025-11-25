@@ -8,5 +8,6 @@ public record JwtResponse(
         String type,
         String matricula,
         String email,
-        String perfil) {
+        String perfil,
+        String nome) {
 }
